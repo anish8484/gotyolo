@@ -40,6 +40,13 @@ gotyolo/
     ├── init.sql            # Table definitions and indexes
     └── seed.js             # Mock data generation script
 
+## Folder Responsibilities
+#### src/routes/: Defines the API contract (URL paths and HTTP methods). It validates basic input parameters and delegates work to controllers.
+#### src/controllers/: Orchestrates the request flow. It extracts parameters from the request, calls the appropriate service functions, and formats the HTTP response (JSON status codes).
+#### src/services/: Contains the critical business logic. This layer handles database transactions, concurrency locking (SELECT FOR UPDATE), and state machine transitions. It is kept independent of the HTTP layer to allow for easier testing.
+#### src/jobs/: Houses scheduled tasks, specifically the worker that finds and expires stale PENDING_PAYMENT bookings.
+#### database/: Manages the persistence layer. init.sql runs automatically on container startup to ensure the schema is ready.    
+
 ## API Documentation
 Trips
 GET /trips: List all published trips.
