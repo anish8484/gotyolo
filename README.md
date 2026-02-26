@@ -14,31 +14,31 @@ The API will be available at http://localhost:3000. The database will be seeded 
 Project Structure
 
 gotyolo/
-├── Dockerfile
-├── docker-compose.yml
-├── package.json
-├── src/
-│   ├── config.js
-│   ├── database.js
-│   ├── index.js
-│   ├── routes/
-│   │   ├── admin.routes.js
-│   │   ├── booking.routes.js
-│   │   ├── trip.routes.js
-│   │   └── webhook.routes.js
-│   ├── controllers/
-│   │   ├── admin.controller.js
-│   │   ├── booking.controller.js
-│   │   ├── trip.controller.js
-│   │   └── webhook.controller.js
-│   ├── services/
-│   │   ├── booking.service.js
-│   │   └── trip.service.js
-│   └── jobs/
-│       └── expiry.job.js
-└── database/
-    ├── init.sql
-    └── seed.js
+ ├── Dockerfile
+ ├── docker-compose.yml
+ ├── package.json
+ ├── src/
+ │   ├── config.js
+ │   ├── database.js
+ │   ├── index.js
+ │   ├── routes/
+ │   │   ├── admin.routes.js
+ │   │   ├── booking.routes.js
+ │   │   ├── trip.routes.js
+ │   │   └── webhook.routes.js
+ │   ├── controllers/
+ │   │   ├── admin.controller.js
+ │   │   ├── booking.controller.js
+ │   │   ├── trip.controller.js
+ │   │   └── webhook.controller.js
+ │   ├── services/
+ │   │   ├── booking.service.js
+ │   │   └── trip.service.js
+ │   └── jobs/
+ │       └── expiry.job.js
+ └── database/
+     ├── init.sql
+     └── seed.js
 
 API Documentation
 Trips
