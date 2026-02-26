@@ -11,9 +11,9 @@ Run Application:
 docker-compose up --build
 The API will be available at http://localhost:3000. The database will be seeded automatically with sample trips.
 
-Project Structure
+## Project Structure
 
-gotyolo/
+/gotyolo/
  ├── Dockerfile
  ├── docker-compose.yml
  ├── package.json
