@@ -1,0 +1,27 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: gotyolo
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    environment:
+      DATABASE_URL: postgres://admin:password@db:5432/gotyolo
+      PORT: 3000
+    depends_on:
+      - db
+    command: sh -c "npm start & sleep 5 && npm run seed"
+    # Note: In prod, use a proper entrypoint script. This ensures seed runs after DB is ready.
+
+volumes:
+  db-data:
