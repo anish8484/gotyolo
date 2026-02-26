@@ -1,7 +1,7 @@
-GoTyolo Backend
+## GoTyolo Backend
 A backend API for a travel booking platform handling trip discovery, booking state machines, concurrent reservations, and refund policies.
 
-Tech Stack
+## Tech Stack
 Node.js & Express: Lightweight, efficient for I/O heavy APIs.
 PostgreSQL: Chosen for robust transaction support and row-level locking essential for preventing overbooking.
 Docker: For consistent environment setup.
@@ -40,7 +40,7 @@ The API will be available at http://localhost:3000. The database will be seeded 
      ├── init.sql
      └── seed.js
 
-API Documentation
+## API Documentation
 Trips
 GET /trips: List all published trips.
 GET /trips/:id: Get trip details.
