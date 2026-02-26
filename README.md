@@ -13,7 +13,7 @@ The API will be available at http://localhost:3000. The database will be seeded 
 
 ## Project Structure
 
-/gotyolo/
+gotyolo/
  ├── Dockerfile
  ├── docker-compose.yml
  ├── package.json
@@ -102,7 +102,7 @@ Fix: The code explicitly checks the cutoff date. If the cancellation is non-refu
 
 ## Postman Collection (Usage Examples)
 
-**1. List Trips**
+1. List Trips
 ```bash
 curl --location 'localhost:3000/trips'
 
