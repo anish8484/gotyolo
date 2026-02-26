@@ -14,31 +14,31 @@ The API will be available at http://localhost:3000. The database will be seeded 
 ## Project Structure
 
 gotyolo/
- ├── Dockerfile
- ├── docker-compose.yml
- ├── package.json
- ├── src/
- │   ├── config.js
- │   ├── database.js
- │   ├── index.js
- │   ├── routes/
- │   │   ├── admin.routes.js
- │   │   ├── booking.routes.js
- │   │   ├── trip.routes.js
- │   │   └── webhook.routes.js
- │   ├── controllers/
- │   │   ├── admin.controller.js
- │   │   ├── booking.controller.js
- │   │   ├── trip.controller.js
- │   │   └── webhook.controller.js
- │   ├── services/
- │   │   ├── booking.service.js
- │   │   └── trip.service.js
- │   └── jobs/
- │       └── expiry.job.js
- └── database/
-     ├── init.sql
-     └── seed.js
+├── Dockerfile              # Container definition for the Node.js app
+├── docker-compose.yml      # Orchestrates App and PostgreSQL services
+├── package.json            # Project dependencies and scripts
+├── src/
+│   ├── config.js           # Environment variables and configuration
+│   ├── database.js         # PostgreSQL connection pool setup
+│   ├── index.js            # Application entry point (Express setup)
+│   ├── routes/             # Defines API endpoints and maps to controllers
+│   │   ├── admin.routes.js
+│   │   ├── booking.routes.js
+│   │   ├── trip.routes.js
+│   │   └── webhook.routes.js
+│   ├── controllers/        # Handles HTTP request parsing and response formatting
+│   │   ├── admin.controller.js
+│   │   ├── booking.controller.js
+│   │   ├── trip.controller.js
+│   │   └── webhook.controller.js
+│   ├── services/           # Core business logic (Transactions, State Machines)
+│   │   ├── booking.service.js
+│   │   └── trip.service.js
+│   └── jobs/               # Background tasks (Auto-expiry worker)
+│       └── expiry.job.js
+└── database/               # Database schema and initialization
+    ├── init.sql            # Table definitions and indexes
+    └── seed.js             # Mock data generation script
 
 ## API Documentation
 Trips
