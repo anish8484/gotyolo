@@ -4,10 +4,10 @@ The booking lifecycle follows a strict state machine to ensure data integrity an
 
 ### State Diagram:
 
-[ Start ]
+[ Start ]               # Start
     |
     v
-PENDING_PAYMENT  ----(15 min timeout)----> EXPIRED
+PENDING_PAYMENT  ----(15 min timeout)----> EXPIRED       # Pending Payment
     |                                        ^
     |                                        |
     |----(Webhook: Failed)-------------------|
